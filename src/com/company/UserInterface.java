@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -45,6 +47,10 @@ public class UserInterface {
     System.out.println("Input 0 to end the Order.");
     System.out.print("Else indput menu number of the pizza: ");
     return sc.nextInt();
+  }
+
+  public void displayOrderList (ArrayList<Bestilling> aListOfOrders) {
+
   }
 
 }

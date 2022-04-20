@@ -26,6 +26,10 @@ public class Bestilling {
     orderItems.add(chosenPizza);
   }
 
+  public int getPickUpTime(){
+    return pickUpTime;
+  }
+
   @Override
   public String toString() {
     return "costumer name: " + costumerName + ", pickUpTime: " + pickUpTime +

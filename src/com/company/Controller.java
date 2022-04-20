@@ -29,6 +29,10 @@ public class Controller {
     Creator creator = new Creator();
     creator.createPizzas(menuCard);
 
+    //made some orderes to test the orderList.toString
+    creator.createSomePizzas(orderList);
+
+
 
     boolean loop = true;
     while (loop) {
@@ -39,7 +43,7 @@ public class Controller {
       switch (choice) {
         case 1 -> ui.displayPizzaMenu(menuCard);
         case 2 -> newOrder();
-        case 3 -> System.out.println(orderList.toString());
+        case 3 -> System.out.println(orderList);
         case 4 -> System.out.println("Remove Order");
         case 5 -> System.out.println("Display Stats");
         case 10 -> loop = false;
