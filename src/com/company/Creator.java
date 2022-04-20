@@ -2,12 +2,13 @@ package com.company;
 
 public class Creator {
 
+  public Menukort menu = new Menukort();
 
   public void createPizzas() {
-    Menukort menu = new Menukort();
+
 
     Pizza vesuvio = new Pizza("Vesuvio", 1, 57);
-    vesuvio.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.SKINKE,Topping.OREGANO});
+    vesuvio.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.SKINKE, Topping.OREGANO});
     menu.addToMenu(vesuvio);
 
     Pizza amerikaner = new Pizza("Amerikaner", 2, 53);
@@ -15,7 +16,7 @@ public class Creator {
     menu.addToMenu(amerikaner);
 
     Pizza cacciatore = new Pizza("cacciatore", 3, 57);
-    cacciatore.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.PEPPERONI, Topping. OREGANO});
+    cacciatore.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.PEPPERONI, Topping.OREGANO});
     menu.addToMenu(cacciatore);
 
     Pizza carbona = new Pizza("Carbona", 4, 63);
@@ -60,5 +61,10 @@ public class Creator {
 
     Pizza mafia = new Pizza("Mafia", 14, 61);
     mafia.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.PEPPERONI, Topping.BACON, Topping.LØG, Topping.OREGANO});
+    menu.addToMenu(mafia);
+  }
+
+  public Menukort getMenu() {
+    return menu;
   }
 }

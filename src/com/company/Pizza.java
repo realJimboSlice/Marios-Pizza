@@ -16,8 +16,18 @@ public class Pizza {
     this.Topping = new ArrayList<>();
   }
 
-  public String toString(){
-    return menuNmb + ", " + name + ", " + price + " kr";
+  public String toString() {
+    String dot = ".";
+    String space = " ";
+    int repeat;
+    if (menuNmb == 1) {
+      repeat = 2;
+    } else if (menuNmb < 10 || menuNmb > 1) {
+      repeat = 1;
+    } else {
+      repeat = 0;
+    }
+    return space.repeat(repeat) + menuNmb + ". " + name + dot.repeat(60 - (name.length())) + price + " kr\n   " + Topping + "\n\n";
   }
 
   public String getName() {
@@ -37,13 +47,13 @@ public class Pizza {
   }
 
   public void addToppings(Topping[] toppings) {
-    for(Topping topping : toppings) {
+    for (Topping topping : toppings) {
       Topping.add(topping);
     }
   }
 
 
-    public void removeTopping(String topping){
+  public void removeTopping(String topping) {
     this.Topping.remove(topping);
   }
 

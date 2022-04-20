@@ -15,7 +15,8 @@ public class Controller {
       int choice = ui.indputNumber();
 
       switch (choice){
-        case 1 -> System.out.println("Display the Menu");
+        case 1 -> {System.out.println("Display the Menu");
+          System.out.println(creator.getMenu());}
         case 2 -> System.out.println("Add Orders");
         case 3 -> System.out.println("View Orders");
         case 4 -> System.out.println("Remove Order");

@@ -12,9 +12,8 @@ public class Menukort {
 
   @Override
   public String toString() {
-    return "Menukort{" +
-        "menuCard=" + menuCard +
-        '}';
+    String space = " ";
+    return space.repeat(30) + "PIZZAER:\n" + menuCard;
   }
 
   public void addToMenu(Pizza pizza){
@@ -26,6 +25,6 @@ public class Menukort {
   }
 
   public ArrayList<Pizza> getMenuCard() {
-    return menuCard;
+    return this.menuCard;
   }
 }
