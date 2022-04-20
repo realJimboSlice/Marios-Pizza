@@ -2,10 +2,7 @@ package com.company;
 
 public class Creator {
 
-//  public Menukort menu = new Menukort();
-
   public void createPizzas(Menucard menukort) {
-
 
     Pizza vesuvio = new Pizza("Vesuvio", 1, 57);
     vesuvio.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.SKINKE, Topping.OREGANO});

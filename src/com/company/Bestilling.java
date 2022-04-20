@@ -21,4 +21,16 @@ public class Bestilling {
     this.orderItems = new ArrayList<>();
   }
 
+
+  public void addPizzaToOrder (Pizza chosenPizza){
+    orderItems.add(chosenPizza);
+  }
+
+  @Override
+  public String toString() {
+    return costumerName +
+        "pickUpTime=" + pickUpTime +
+        ", totalPrice=" + totalPrice +
+        ", orderItems=" + orderItems;
+  }
 }

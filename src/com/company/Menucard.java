@@ -27,4 +27,13 @@ public class Menucard {
   public ArrayList<Pizza> getMenuCard() {
     return this.menuCard;
   }
+
+  public Pizza findPizzaByMenuNumber (int pizzaChoice) {
+    for (Pizza pizza: menuCard){
+      if (pizza.getMenuNumber() == pizzaChoice){
+        return pizza;
+      }
+    }
+    return null;
+  }
 }

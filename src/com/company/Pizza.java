@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class Pizza {
 
   public String name;
-  public int menuNmb;
+  public int menuNumber;
   public int price;
   public ArrayList<Topping> Topping;
 
   public Pizza(String name, int menuNmb, int price) {
     this.name = name;
-    this.menuNmb = menuNmb;
+    this.menuNumber = menuNmb;
     this.price = price;
     this.Topping = new ArrayList<>();
   }
@@ -20,14 +20,14 @@ public class Pizza {
     String dot = ".";
     String space = " ";
     int repeat;
-    if (menuNmb == 1) {
+    if (menuNumber == 1) {
       repeat = 2;
-    } else if (menuNmb < 10 || menuNmb > 1) {
+    } else if (menuNumber < 10 || menuNumber > 1) {
       repeat = 1;
     } else {
       repeat = 0;
     }
-    return space.repeat(repeat) + menuNmb + ". " + name + dot.repeat(60 - (name.length())) + price + " kr\n   " + Topping + "\n\n";
+    return space.repeat(repeat) + menuNumber + ". " + name + dot.repeat(60 - (name.length())) + price + " kr\n   " + Topping + "\n\n";
   }
 
   public String getName() {
@@ -35,7 +35,7 @@ public class Pizza {
   }
 
   public int getOrdreNmb() {
-    return menuNmb;
+    return menuNumber;
   }
 
   public int getPrice() {
@@ -62,10 +62,14 @@ public class Pizza {
   }
 
   public void setOrdreNmb(int ordreNmb) {
-    this.menuNmb = ordreNmb;
+    this.menuNumber = ordreNmb;
   }
 
   public void setPrice(int price) {
     this.price = price;
+  }
+
+  public int getMenuNumber() {
+    return menuNumber;
   }
 }

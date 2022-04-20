@@ -12,4 +12,9 @@ public class OrderList {
   public void addOrder (Bestilling newOrder) {
     listOfOrders.add(newOrder);
   }
+
+  @Override
+  public String toString() {
+    return "Orders in the system: "+ listOfOrders;
+  }
 }
