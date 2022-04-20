@@ -5,6 +5,9 @@ public class Controller {
 
   public void mainMenu () {
 
+    Creator creator = new Creator();
+    creator.createPizzas();
+
     boolean loop = true;
     while (loop) {
 

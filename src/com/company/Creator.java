@@ -46,7 +46,7 @@ public class Creator {
     menu.addToMenu(dennis);
 
     Pizza bertil = new Pizza("Bertil", 6, 57);
-    bertil.addTopping(Topping.TOMATSAUCE));
+    bertil.addTopping(Topping.TOMATSAUCE);
     bertil.addTopping(Topping.OST);
     bertil.addTopping(Topping.BACON);
     bertil.addTopping(Topping.OREGANO);
@@ -56,6 +56,5 @@ public class Creator {
     silvia.addTopping(Topping.TOMATSAUCE);
     silvia.addTopping(Topping.OST);
     silvia.addTopping(Topping.PEPPERONI);
-    silvia.addTopping(Topping.);
   }
 }
