@@ -6,6 +6,11 @@ public class UserInterface {
   public Scanner sc = new Scanner(System.in);
 
 
+  public String inputName (){
+    System.out.print("Input name of costumer: ");
+    return sc.nextLine();
+  }
+
   public void displayMenu () {
 
     System.out.printf("""
@@ -16,6 +21,15 @@ public class UserInterface {
         Display stats     : 5
         Exit program      : 10
         """);
+  }
+
+  public int indputPickupTime () {
+    System.out.print("Indput pickup time: ");
+    return sc.nextInt();
+  }
+
+  public void displayPizzaMenu (Menucard menuCard){
+    System.out.println(menuCard.toString());
   }
 
   public int indputNumber () {

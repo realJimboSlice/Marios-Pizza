@@ -2,11 +2,25 @@ package com.company;
 
 public class Controller {
   UserInterface ui = new UserInterface();
+  OrderList orderList = new OrderList();
+  Menucard menuCard = new Menucard();
 
-  public void mainMenu () {
+  private void newOrder() {
+    String costumerName = ui.inputName();
+    int pickUpTime = ui.indputPickupTime();
+
+    Bestilling newPizzaOrder = new Bestilling(pickUpTime, costumerName);
+
+
+
+    orderList.addOrder(newPizzaOrder);
+  }
+
+  public void mainMenu() {
 
     Creator creator = new Creator();
-    creator.createPizzas();
+    creator.createPizzas(menuCard);
+
 
     boolean loop = true;
     while (loop) {
@@ -14,9 +28,8 @@ public class Controller {
       ui.displayMenu();
       int choice = ui.indputNumber();
 
-      switch (choice){
-        case 1 -> {System.out.println("Display the Menu");
-          System.out.println(creator.getMenu());}
+      switch (choice) {
+        case 1 -> ui.displayPizzaMenu(menuCard);
         case 2 -> System.out.println("Add Orders");
         case 3 -> System.out.println("View Orders");
         case 4 -> System.out.println("Remove Order");

@@ -2,11 +2,11 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class Menukort {
+public class Menucard {
 
   public ArrayList<Pizza> menuCard;
 
-  public Menukort(){
+  public Menucard(){
     this.menuCard = new ArrayList<>();
   }
 
