@@ -6,7 +6,7 @@ public class Creator {
   public void createPizzas() {
     Menukort menu = new Menukort();
 
-    Pizza vesuvio = new Pizza("vesuvio", 1, 57);
+    Pizza vesuvio = new Pizza("Vesuvio", 1, 57);
     vesuvio.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.SKINKE,Topping.OREGANO});
     menu.addToMenu(vesuvio);
 
