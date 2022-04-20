@@ -28,9 +28,8 @@ public class Bestilling {
 
   @Override
   public String toString() {
-    return costumerName +
-        "pickUpTime=" + pickUpTime +
-        ", totalPrice=" + totalPrice +
-        ", orderItems=" + orderItems;
+    return "costumer name: " + costumerName + ", pickUpTime: " + pickUpTime +
+        ", totalPrice = " + totalPrice +
+        ", orderItems = " + orderItems;
   }
 }

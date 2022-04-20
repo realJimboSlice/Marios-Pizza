@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class Pizza {
 
-  public String name;
-  public int menuNumber;
-  public int price;
-  public ArrayList<Topping> Topping;
+  private String name;
+  private int menuNumber;
+  private int price;
+  private ArrayList<Topping> Topping;
 
   public Pizza(String name, int menuNmb, int price) {
     this.name = name;
