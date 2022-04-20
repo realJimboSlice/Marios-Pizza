@@ -7,55 +7,58 @@ public class Creator {
     Menukort menu = new Menukort();
 
     Pizza vesuvio = new Pizza("vesuvio", 1, 57);
-    vesuvio.addTopping(Topping.TOMATSAUCE);
-    vesuvio.addTopping(Topping.OST);
-    vesuvio.addTopping(Topping.SKINKE);
-    vesuvio.addTopping(Topping.OREGANO);
+    vesuvio.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.SKINKE,Topping.OREGANO});
     menu.addToMenu(vesuvio);
 
     Pizza amerikaner = new Pizza("Amerikaner", 2, 53);
-    amerikaner.addTopping(Topping.TOMATSAUCE);
-    amerikaner.addTopping(Topping.OST);
-    amerikaner.addTopping(Topping.OKSEFARS);
-    amerikaner.addTopping(Topping.OREGANO);
+    amerikaner.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.OKSEFARS, Topping.OREGANO});
     menu.addToMenu(amerikaner);
 
     Pizza cacciatore = new Pizza("cacciatore", 3, 57);
-    cacciatore.addTopping(Topping.TOMATSAUCE);
-    cacciatore.addTopping(Topping.OST);
-    cacciatore.addTopping(Topping.PEPPERONI);
-    cacciatore.addTopping(Topping.OREGANO);
+    cacciatore.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.PEPPERONI, Topping. OREGANO});
     menu.addToMenu(cacciatore);
 
     Pizza carbona = new Pizza("Carbona", 4, 63);
-    carbona.addTopping(Topping.TOMATSAUCE);
-    carbona.addTopping(Topping.OST);
-    carbona.addTopping(Topping.KØDSAUCE);
-    carbona.addTopping(Topping.SPAGHETTI);
-    carbona.addTopping(Topping.COCKTAILPØLSER);
-    carbona.addTopping(Topping.OREGANO);
+    carbona.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.KØDSAUCE, Topping.SPAGHETTI, Topping.COCKTAILPØLSER, Topping.OREGANO});
     menu.addToMenu(carbona);
 
     Pizza dennis = new Pizza("Dennis", 5, 65);
-    dennis.addTopping(Topping.TOMATSAUCE);
-    dennis.addTopping(Topping.OST);
-    dennis.addTopping(Topping.SKINKE);
-    dennis.addTopping(Topping.PEPPERONI);
-    dennis.addTopping(Topping.COCKTAILPØLSER);
-    dennis.addTopping(Topping.OREGANO);
+    dennis.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.SKINKE, Topping.PEPPERONI, Topping.COCKTAILPØLSER, Topping.OREGANO});
     menu.addToMenu(dennis);
 
     Pizza bertil = new Pizza("Bertil", 6, 57);
-    bertil.addTopping(Topping.TOMATSAUCE));
-    bertil.addTopping(Topping.OST);
-    bertil.addTopping(Topping.BACON);
-    bertil.addTopping(Topping.OREGANO);
+    bertil.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.BACON, Topping.OREGANO});
     menu.addToMenu(bertil);
 
     Pizza silvia = new Pizza("Silvia", 7, 61);
-    silvia.addTopping(Topping.TOMATSAUCE);
-    silvia.addTopping(Topping.OST);
-    silvia.addTopping(Topping.PEPPERONI);
-    silvia.addTopping(Topping.);
+    silvia.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.PEPPERONI, Topping.RØD_PEBER, Topping.LØG, Topping.OLIVEN, Topping.OREGANO});
+    menu.addToMenu(silvia);
+
+    Pizza victoria = new Pizza("Victoria", 8, 61);
+    victoria.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.SKINKE, Topping.ANANAS, Topping.CHAMPIGNON, Topping.LØG, Topping.OREGANO});
+    menu.addToMenu(victoria);
+
+    Pizza toronfo = new Pizza("Toronfo", 9, 61);
+    toronfo.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.SKINKE, Topping.BACON, Topping.KEBAB, Topping.CHILI, Topping.OREGANO});
+    menu.addToMenu(toronfo);
+
+    Pizza capricciosa = new Pizza("Capricciosa", 10, 61);
+    capricciosa.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.SKINKE, Topping.CHAMPIGNON, Topping.OREGANO});
+    menu.addToMenu(capricciosa);
+
+    Pizza hawai = new Pizza("Hawai", 11, 61);
+    hawai.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.SKINKE, Topping.ANANAS, Topping.OREGANO});
+    menu.addToMenu(hawai);
+
+    Pizza leBlissola = new Pizza("Le Blissola", 12, 61);
+    leBlissola.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.SKINKE, Topping.REJER, Topping.OREGANO});
+    menu.addToMenu(leBlissola);
+
+    Pizza venezia = new Pizza("Venezia", 13, 61);
+    venezia.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.SKINKE, Topping.BACON, Topping.OREGANO});
+    menu.addToMenu(venezia);
+
+    Pizza mafia = new Pizza("Mafia", 14, 61);
+    mafia.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.PEPPERONI, Topping.BACON, Topping.LØG, Topping.OREGANO});
   }
 }

@@ -36,11 +36,14 @@ public class Pizza {
     return Topping;
   }
 
-  public void addTopping(Topping topping){
-    this.Topping.add(topping);
+  public void addToppings(Topping[] toppings) {
+    for(Topping topping : toppings) {
+      Topping.add(topping);
+    }
   }
 
-  public void removeTopping(String topping){
+
+    public void removeTopping(String topping){
     this.Topping.remove(topping);
   }
 
