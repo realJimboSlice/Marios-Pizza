@@ -32,7 +32,7 @@ public class Timer {
       return yourDesiredDateValue;
     }
 
-  static void Nedtælling() throws InterruptedException {
+  public void Nedtælling() throws InterruptedException {
 
     //Scanner scan = new Scanner(System.in);
     // System.out.println("\nHvor lang tid skal der gå før ordren er klar til afhentning (i minutter) ?");

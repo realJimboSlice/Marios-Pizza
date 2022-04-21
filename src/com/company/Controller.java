@@ -9,7 +9,7 @@ public class Controller {
 
 
 
-  public void mainMenu() {
+  public void mainMenu() throws InterruptedException {
 
     Creator creator = new Creator();
     creator.createPizzas(menuCard);
@@ -25,7 +25,7 @@ public class Controller {
       switch (choice) {
         case 1 -> ui.printMenu(menuCard);//ui.displayPizzaMenu(menuCard);
         case 2 -> orderList.newOrder(menuCard, timer);
-        case 3 -> ui.displayOrderList(orderList);
+        case 3 -> ui.displayOrderList(orderList, timer);
         case 4 -> System.out.println("Remove Order");
         case 5 -> System.out.println("Display Stats");
         case 10 -> loop = false;
