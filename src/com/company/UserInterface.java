@@ -8,12 +8,12 @@ public class UserInterface {
   public Scanner sc = new Scanner(System.in);
 
 
-  public String userInputName(){
+  public String userInputName() {
     System.out.print("Input name of costumer: ");
     return sc.nextLine();
   }
 
-  public void displayMenu () {
+  public void displayMenu() {
 
     System.out.printf("""
 
@@ -23,7 +23,7 @@ public class UserInterface {
         Remove Order      : 4
         Display stats     : 5
         Exit program      : 10
-        
+                
         """);
   }
 
@@ -33,7 +33,7 @@ public class UserInterface {
     return sc.nextInt();
   }
 
-  public void displayPizzaMenu (Menucard menuCard){
+  public void displayPizzaMenu(Menucard menuCard) {
     System.out.println(menuCard.toString());
   }
 
@@ -49,7 +49,50 @@ public class UserInterface {
     return sc.nextInt();
   }
 
-  public void displayOrderList (ArrayList<Bestilling> aListOfOrders) {
+  public String pizzaName() {
+    System.out.println("Input name of new pizza.");
+    return sc.next();
+  }
+
+  public int pizzaNum() {
+    System.out.println("Input designated number for menu.");
+    return sc.nextInt();
+  }
+
+  public int pizzaPrice() {
+    System.out.println("Input price of new pizza");
+    return sc.nextInt();
+  }
+
+  public void printMenu(Menucard menuKort) {
+    String dot = ".";
+    String space = " ";
+
+
+    for (Pizza pizza : menuKort.getMenuCard()) {
+      int repeat;
+      if (pizza.getMenuNumber() == 1) {
+        repeat = 2;
+      } else if (pizza.getMenuNumber()  < 10 || pizza.getMenuNumber() > 1) {
+        repeat = 1;
+      } else {
+        repeat = 0;
+      }
+      System.out.printf("""
+          %d. %s %s %d kr
+          """, pizza.getMenuNumber(), pizza.getName(), dot.repeat(60 - (pizza.getName().length())), pizza.getPrice());
+      System.out.println(pizza.getTopping() + "\n");
+    }
+  }
+
+/*  public Topping toppingPizza() {
+    System.out.println("Enter the topping you wish to add to the pizza.");
+    String topping = sc.next();
+
+    return ;
+  }*/
+
+  public void displayOrderList(ArrayList<Bestilling> aListOfOrders) {
 
   }
 

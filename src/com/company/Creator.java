@@ -2,6 +2,8 @@ package com.company;
 
 public class Creator {
 
+  UserInterface ui;
+
   public void createPizzas(Menucard menukort) {
 
     Pizza vesuvio = new Pizza("Vesuvio", 1, 57);
@@ -74,4 +76,11 @@ public class Creator {
     orderList.addOrder(fjerde);
     orderList.addOrder(femte);
   }
+
+/*  public void createNewPizza(Menucard menukort){
+
+    Pizza pizza = new Pizza(ui.pizzaName(), ui.pizzaNum(), ui.pizzaPrice());
+    pizza.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, ui.toppingPizza()});
+    menukort.addToMenu(pizza);
+  }*/
 }
