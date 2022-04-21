@@ -9,8 +9,9 @@ public class UserInterface {
 
 
   public String userInputName(){
-    System.out.print("Input name of costumer: ");
-    return sc.nextLine();
+    System.out.println("Input name of costumer: ");
+    String name = sc.next();
+    return name;
   }
 
   public void displayMenu () {
@@ -28,9 +29,9 @@ public class UserInterface {
   }
 
   public int userIndputPickupTime() {
-    sc.next();
     System.out.print("Indput pickup time: ");
-    return sc.nextInt();
+    int time = sc.nextInt();
+    return time;
   }
 
   public void displayPizzaMenu(Menucard menuCard) {
