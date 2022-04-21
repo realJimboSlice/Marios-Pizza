@@ -63,7 +63,7 @@ public class UserInterface {
           Price total:      %d
           
           """, temp.getPickUpTime(), temp.getCostumerName(), temp.getTotalPrice());
-      timer.Nedtælling();
+      //timer.Nedtælling();
       for (Pizza pizza : pizzaInOrder) {
       System.out.printf("""
           Pizza name:       %s

@@ -31,6 +31,10 @@ public class Bestilling {
   }
 
   public int getTotalPrice() {
+    for (Pizza pizza:
+         orderItems) {
+      totalPrice += pizza.getPrice();
+    }
     return totalPrice;
   }
 
