@@ -13,6 +13,10 @@ public class OrderList {
     listOfOrders.add(newOrder);
   }
 
+  public ArrayList<Bestilling> getListOfOrders() {
+    return listOfOrders;
+  }
+
   @Override
   public String toString() {
     return "Orders in the system: "+ listOfOrders;

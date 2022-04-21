@@ -8,12 +8,12 @@ public class UserInterface {
   public Scanner sc = new Scanner(System.in);
 
 
-  public String userInputName() {
+  public String userInputName(){
     System.out.print("Input name of costumer: ");
     return sc.nextLine();
   }
 
-  public void displayMenu() {
+  public void displayMenu () {
 
     System.out.printf("""
 
@@ -23,7 +23,7 @@ public class UserInterface {
         Remove Order      : 4
         Display stats     : 5
         Exit program      : 10
-                
+        
         """);
   }
 
@@ -49,19 +49,31 @@ public class UserInterface {
     return sc.nextInt();
   }
 
-  public String pizzaName() {
-    System.out.println("Input name of new pizza.");
-    return sc.next();
-  }
+  public void displayOrderList(OrderList aListOfOrders) {
 
-  public int pizzaNum() {
-    System.out.println("Input designated number for menu.");
-    return sc.nextInt();
-  }
+    ArrayList<Bestilling> currentOrders = aListOfOrders.getListOfOrders();
+    for (int i = 0; i < currentOrders.size(); i++) {
 
-  public int pizzaPrice() {
-    System.out.println("Input price of new pizza");
-    return sc.nextInt();
+      Bestilling temp = currentOrders.get(i);
+      ArrayList<Pizza> pizzaInOrder = temp.getOrderItems();
+      System.out.printf("""
+                
+          Pickuptime:       %d
+          Name:             %s
+          Price total:      %d
+          
+          """, temp.getPickUpTime(), temp.getCostumerName(), temp.getTotalPrice());
+
+      for (Pizza pizza : pizzaInOrder) {
+      System.out.printf("""
+          Pizza name:       %s
+          Pizza toppings:   %s
+          
+          """, pizza.getName(),pizza.getTopping());
+    }
+
+    }
+
   }
 
   public void printMenu(Menucard menuKort) {
@@ -85,15 +97,19 @@ public class UserInterface {
     }
   }
 
-/*  public Topping toppingPizza() {
-    System.out.println("Enter the topping you wish to add to the pizza.");
-    String topping = sc.next();
+  public String pizzaName() {
+    System.out.println("Input name of new pizza.");
+    return sc.next();
+  }
 
-    return ;
-  }*/
+  public int pizzaNum() {
+    System.out.println("Input designated number for menu.");
+    return sc.nextInt();
+  }
 
-  public void displayOrderList(ArrayList<Bestilling> aListOfOrders) {
-
+  public int pizzaPrice() {
+    System.out.println("Input price of new pizza");
+    return sc.nextInt();
   }
 
 }
