@@ -9,7 +9,9 @@ public class UserInterface {
 
   public String userInputName() {
     System.out.print("Input name of costumer: ");
-    return sc.nextLine();
+    sc.next();
+    String name = sc.nextLine();
+    return name;
   }
 
   public void displayMenu() {
@@ -57,7 +59,7 @@ public class UserInterface {
       ArrayList<Pizza> pizzaInOrder = temp.getOrderItems();
       System.out.printf("""
                 
-          Pickuptime:       %d
+          Pickuptime:       %s
           Name:             %s
           Price total:      %d
           

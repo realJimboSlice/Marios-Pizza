@@ -3,7 +3,7 @@ package com.company;
 import java.util.ArrayList;
 
 public class Bestilling {
-  private int pickUpTime;
+  private String pickUpTime;
   private boolean isDelivered;
   private boolean isPaid;
   private int totalPrice;
@@ -11,7 +11,7 @@ public class Bestilling {
   private String costumerName;
   private ArrayList <Pizza> orderItems;
 
-  public Bestilling (int pickUpTime, String costumerName){
+  public Bestilling (String pickUpTime, String costumerName){
     this.pickUpTime = pickUpTime;
     this.costumerName = costumerName;
     this.isPaid = false;
@@ -38,7 +38,7 @@ public class Bestilling {
     return orderItems;
   }
 
-  public int getPickUpTime(){
+  public String getPickUpTime(){
     return pickUpTime;
   }
 

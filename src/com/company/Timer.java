@@ -25,11 +25,11 @@ public class Timer {
     }
   }
 
-    static void Afhentningstidspunkt() {
+    public String afhentningstidspunkt() {
       // Timeren viser en time senere (altså hvornår pizzaen skal afhentes (3600000 er en time i millisekunder))
       Date date = new Date(System.currentTimeMillis() + 3600000);
       String yourDesiredDateValue = new SimpleDateFormat("hh:mm").format(date);
-      System.out.println("\nOrdren skal være klar kl. " + yourDesiredDateValue);
+      return yourDesiredDateValue;
     }
 
   static void Nedtælling() throws InterruptedException {

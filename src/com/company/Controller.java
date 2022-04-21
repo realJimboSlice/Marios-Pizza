@@ -4,11 +4,12 @@ public class Controller {
   UserInterface ui = new UserInterface();
   OrderList orderList = new OrderList();
   Menucard menuCard = new Menucard();
+  Timer timer = new Timer();
 
 
   private void newOrder() {
     String costumerName = ui.userInputName();
-    int pickUpTime = ui.userIndputPickupTime();
+    String pickUpTime = timer.afhentningstidspunkt();
 
     Bestilling newPizzaOrder = new Bestilling(pickUpTime, costumerName);
 
@@ -30,7 +31,7 @@ public class Controller {
     creator.createPizzas(menuCard);
 
     //made some orderes to test the orderList.toString
-    creator.createSomePizzas(orderList);
+//    creator.createSomePizzas(orderList);
 
 
 
