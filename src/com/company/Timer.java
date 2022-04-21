@@ -34,10 +34,10 @@ public class Timer {
 
   static void Nedtælling() throws InterruptedException {
 
-    Scanner scan = new Scanner(System.in);
-    System.out.println("\nHvor lang tid skal der gå før ordren er klar til afhentning (i minutter) ?");
+    //Scanner scan = new Scanner(System.in);
+    // System.out.println("\nHvor lang tid skal der gå før ordren er klar til afhentning (i minutter) ?");
     // Konverterer input til sekunder
-    int timet = scan.nextInt() * 60;
+    int timet = 60 * 60;
     // konverterer sekunder til millisekunder
     long delay = timet * 1000;
 
@@ -48,9 +48,9 @@ public class Timer {
       System.out.println(minutes + " minut(ter), " + seconds + " sekund(er)");
       // Hvor lang tid der går i mellem hvert tick (i millisekunder)
       // (1000 millisekunder = 1 sekund) (60000 millisekunder = 1 minut) (3600000 millisekunder = 1 time)
-      Thread.sleep(300000);
+      Thread.sleep(60000);
       // Hvor mange sekunder der bliver hugget hver gang den ticker
-      timet = timet - 300;
+      timet = timet - 60;
       // Ikke røre
       delay = delay - 1000;
 
