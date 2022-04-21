@@ -4,6 +4,7 @@ public class Controller {
   UserInterface ui = new UserInterface();
   public OrderList orderList = new OrderList();
   Menucard menuCard = new Menucard();
+  Timer timer = new Timer();
 
 
 
@@ -12,9 +13,6 @@ public class Controller {
 
     Creator creator = new Creator();
     creator.createPizzas(menuCard);
-
-    //made some orderes to test the orderList.toString
-    creator.createSomePizzas(orderList);
 
 
 
@@ -26,7 +24,7 @@ public class Controller {
 
       switch (choice) {
         case 1 -> ui.printMenu(menuCard);//ui.displayPizzaMenu(menuCard);
-        case 2 -> orderList.newOrder(menuCard);
+        case 2 -> orderList.newOrder(menuCard, timer);
         case 3 -> ui.displayOrderList(orderList);
         case 4 -> System.out.println("Remove Order");
         case 5 -> System.out.println("Display Stats");

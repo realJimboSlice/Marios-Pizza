@@ -1,15 +1,13 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
   public Scanner sc = new Scanner(System.in);
 
-
   public String userInputName(){
-    System.out.println("Input name of costumer: ");
+    System.out.print("Input name of costumer: ");
     String name = sc.next();
     return name;
   }

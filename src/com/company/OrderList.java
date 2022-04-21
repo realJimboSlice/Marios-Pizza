@@ -24,9 +24,9 @@ public class OrderList {
     return "Orders in the system: "+ listOfOrders;
   }
 
-  public void newOrder(Menucard menuCard) {
+  public void newOrder(Menucard menuCard, Timer timer) {
     String costumerName = ui.userInputName();
-    String pickUpTime = ui.userIndputPickupTime();
+    String pickUpTime = timer.afhentningstidspunkt();
 
     Bestilling newPizzaOrder = new Bestilling(pickUpTime, costumerName);
 
