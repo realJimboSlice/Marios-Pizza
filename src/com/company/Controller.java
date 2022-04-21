@@ -2,36 +2,17 @@ package com.company;
 
 public class Controller {
   UserInterface ui = new UserInterface();
-  OrderList orderList = new OrderList();
+  public OrderList orderList = new OrderList();
   Menucard menuCard = new Menucard();
   Timer timer = new Timer();
 
 
-  private void newOrder() {
-    String costumerName = ui.userInputName();
-    String pickUpTime = timer.afhentningstidspunkt();
 
-    Bestilling newPizzaOrder = new Bestilling(pickUpTime, costumerName);
-
-    int pizzaOfChoiceMenuNumber = 1;
-    while (pizzaOfChoiceMenuNumber != 0) {
-      pizzaOfChoiceMenuNumber = ui.userIndputPizzaMenuNumber();
-      Pizza chosenPizza = menuCard.findPizzaByMenuNumber(pizzaOfChoiceMenuNumber);
-      if (pizzaOfChoiceMenuNumber != 0 && pizzaOfChoiceMenuNumber < 15) {
-        newPizzaOrder.addPizzaToOrder(chosenPizza);
-      }
-    }
-
-    orderList.addOrder(newPizzaOrder);
-  }
 
   public void mainMenu() {
 
     Creator creator = new Creator();
     creator.createPizzas(menuCard);
-
-    //made some orderes to test the orderList.toString
-//    creator.createSomePizzas(orderList);
 
 
 
@@ -43,7 +24,7 @@ public class Controller {
 
       switch (choice) {
         case 1 -> ui.printMenu(menuCard);//ui.displayPizzaMenu(menuCard);
-        case 2 -> newOrder();
+        case 2 -> orderList.newOrder(menuCard, timer);
         case 3 -> ui.displayOrderList(orderList);
         case 4 -> System.out.println("Remove Order");
         case 5 -> System.out.println("Display Stats");

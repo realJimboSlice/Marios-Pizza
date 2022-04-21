@@ -1,17 +1,14 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
   public Scanner sc = new Scanner(System.in);
 
-
   public String userInputName(){
     System.out.print("Input name of costumer: ");
-    sc.next();
-    String name = sc.nextLine();
+    String name = sc.next();
     return name;
   }
 
@@ -29,10 +26,11 @@ public class UserInterface {
         """);
   }
 
-  public int userIndputPickupTime() {
+  public String userIndputPickupTime() {
     sc.next();
     System.out.print("Indput pickup time: ");
-    return sc.nextInt();
+    String time = sc.next();
+    return time;
   }
 
   public void displayPizzaMenu(Menucard menuCard) {
