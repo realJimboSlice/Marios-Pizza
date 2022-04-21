@@ -28,10 +28,10 @@ public class UserInterface {
         """);
   }
 
-  public int userIndputPickupTime() {
+  public String userIndputPickupTime() {
     sc.next();
     System.out.print("Indput pickup time: ");
-    int time = sc.nextInt();
+    String time = sc.next();
     return time;
   }
 

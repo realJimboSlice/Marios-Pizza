@@ -26,7 +26,7 @@ public class OrderList {
 
   public void newOrder(Menucard menuCard) {
     String costumerName = ui.userInputName();
-    int pickUpTime = ui.userIndputPickupTime();
+    String pickUpTime = ui.userIndputPickupTime();
 
     Bestilling newPizzaOrder = new Bestilling(pickUpTime, costumerName);
 
