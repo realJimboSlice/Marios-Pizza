@@ -29,6 +29,7 @@ public class UserInterface {
   }
 
   public int userIndputPickupTime() {
+    sc.next();
     System.out.print("Indput pickup time: ");
     int time = sc.nextInt();
     return time;
@@ -59,7 +60,7 @@ public class UserInterface {
       ArrayList<Pizza> pizzaInOrder = temp.getOrderItems();
       System.out.printf("""
                 
-          Pickuptime:       %d
+          Pickuptime:       %s
           Name:             %s
           Price total:      %d
           

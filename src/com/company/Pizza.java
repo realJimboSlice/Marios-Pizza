@@ -22,7 +22,7 @@ public class Pizza {
   }
 
   public String getName() {
-    return name;
+    return this.name;
   }
 
   public int getOrdreNmb() {

@@ -25,11 +25,11 @@ public class Timer {
     }
   }
 
-    static void Afhentningstidspunkt() {
+    public String afhentningstidspunkt() {
       // Timeren viser en time senere (altså hvornår pizzaen skal afhentes (3600000 er en time i millisekunder))
       Date date = new Date(System.currentTimeMillis() + 3600000);
       String yourDesiredDateValue = new SimpleDateFormat("hh:mm").format(date);
-      System.out.println("\nOrdren skal være klar kl. " + yourDesiredDateValue);
+      return yourDesiredDateValue;
     }
 
   static void Nedtælling() throws InterruptedException {
@@ -48,9 +48,9 @@ public class Timer {
       System.out.println(minutes + " minut(ter), " + seconds + " sekund(er)");
       // Hvor lang tid der går i mellem hvert tick (i millisekunder)
       // (1000 millisekunder = 1 sekund) (60000 millisekunder = 1 minut) (3600000 millisekunder = 1 time)
-      Thread.sleep(1000);
+      Thread.sleep(300000);
       // Hvor mange sekunder der bliver hugget hver gang den ticker
-      timet = timet - 1;
+      timet = timet - 300;
       // Ikke røre
       delay = delay - 1000;
 
