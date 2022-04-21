@@ -26,6 +26,18 @@ public class Bestilling {
     orderItems.add(chosenPizza);
   }
 
+  public String getCostumerName() {
+    return costumerName;
+  }
+
+  public int getTotalPrice() {
+    return totalPrice;
+  }
+
+  public ArrayList<Pizza> getOrderItems() {
+    return orderItems;
+  }
+
   public int getPickUpTime(){
     return pickUpTime;
   }
