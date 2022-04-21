@@ -9,7 +9,7 @@ public class Controller {
 
 
 
-  public void mainMenu() {
+  public void mainMenu() throws InterruptedException {
 
     Creator creator = new Creator();
     creator.createPizzas(menuCard);
