@@ -60,7 +60,7 @@ public class UserInterface {
                 
           Pickuptime:       %s
           Name:             %s
-          Price total:      %d
+          Price total:      %d kr
           
           """, temp.getPickUpTime(), temp.getCostumerName(), temp.getTotalPrice());
       //timer.Nedtælling();
