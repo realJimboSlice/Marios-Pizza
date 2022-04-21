@@ -1,15 +1,13 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
   public Scanner sc = new Scanner(System.in);
 
-
   public String userInputName(){
-    System.out.println("Input name of costumer: ");
+    System.out.print("Input name of costumer: ");
     String name = sc.next();
     return name;
   }
@@ -51,7 +49,7 @@ public class UserInterface {
     return sc.nextInt();
   }
 
-  public void displayOrderList(OrderList aListOfOrders) {
+  public void displayOrderList(OrderList aListOfOrders, Timer timer) throws InterruptedException {
 
     ArrayList<Bestilling> currentOrders = aListOfOrders.getListOfOrders();
     for (int i = 0; i < currentOrders.size(); i++) {
@@ -65,7 +63,7 @@ public class UserInterface {
           Price total:      %d
           
           """, temp.getPickUpTime(), temp.getCostumerName(), temp.getTotalPrice());
-
+      timer.Nedtælling();
       for (Pizza pizza : pizzaInOrder) {
       System.out.printf("""
           Pizza name:       %s
