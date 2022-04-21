@@ -7,8 +7,6 @@ public class Controller {
   Timer timer = new Timer();
 
 
-
-
   public void mainMenu() throws InterruptedException {
 
     Creator creator = new Creator();
