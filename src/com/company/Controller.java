@@ -13,10 +13,6 @@ public class Controller {
     Creator creator = new Creator();
     creator.createPizzas(menuCard);
 
-    //made some orderes to test the orderList.toString
-    creator.createSomePizzas(orderList);
-
-
 
     boolean loop = true;
     while (loop) {
