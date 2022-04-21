@@ -2,6 +2,8 @@ package com.company;
 
 public class Creator {
 
+  UserInterface ui;
+
   public void createPizzas(Menucard menukort) {
 
     Pizza vesuvio = new Pizza("Vesuvio", 1, 57);
@@ -62,16 +64,23 @@ public class Creator {
   }
 
 
-//  public void createSomePizzas(OrderList orderList) {
-//    Bestilling første = new Bestilling(1900,"Sebastian");
-//    Bestilling anden = new Bestilling(2000,"Simon");
-//    Bestilling tredje = new Bestilling(1800,"Ruth");
-//    Bestilling fjerde = new Bestilling(1600,"Freja");
-//    Bestilling femte = new Bestilling(1700,"Felix");
-//    orderList.addOrder(første);
-//    orderList.addOrder(anden);
-//    orderList.addOrder(tredje);
-//    orderList.addOrder(fjerde);
-//    orderList.addOrder(femte);
-//  }
+  public void createSomePizzas(OrderList orderList) {
+    Bestilling første = new Bestilling(1900,"Sebastian");
+    Bestilling anden = new Bestilling(2000,"Simon");
+    Bestilling tredje = new Bestilling(1800,"Ruth");
+    Bestilling fjerde = new Bestilling(1600,"Freja");
+    Bestilling femte = new Bestilling(1700,"Felix");
+    orderList.addOrder(første);
+    orderList.addOrder(anden);
+    orderList.addOrder(tredje);
+    orderList.addOrder(fjerde);
+    orderList.addOrder(femte);
+  }
+
+/*  public void createNewPizza(Menucard menukort){
+
+    Pizza pizza = new Pizza(ui.pizzaName(), ui.pizzaNum(), ui.pizzaPrice());
+    pizza.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, ui.toppingPizza()});
+    menukort.addToMenu(pizza);
+  }*/
 }

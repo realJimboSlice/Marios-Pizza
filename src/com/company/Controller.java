@@ -42,7 +42,7 @@ public class Controller {
       int choice = ui.userIndputNumber();
 
       switch (choice) {
-        case 1 -> ui.displayPizzaMenu(menuCard);
+        case 1 -> ui.printMenu(menuCard);//ui.displayPizzaMenu(menuCard);
         case 2 -> newOrder();
         case 3 -> ui.displayOrderList(orderList);
         case 4 -> System.out.println("Remove Order");

@@ -17,17 +17,8 @@ public class Pizza {
   }
 
   public String toString() {
-    String dot = ".";
-    String space = " ";
-    int repeat;
-    if (menuNumber == 1) {
-      repeat = 2;
-    } else if (menuNumber < 10 || menuNumber > 1) {
-      repeat = 1;
-    } else {
-      repeat = 0;
-    }
-    return space.repeat(repeat) + menuNumber + ". " + name + dot.repeat(60 - (name.length())) + price + " kr\n   " + Topping + "\n\n";
+
+    return name;
   }
 
   public String getName() {
