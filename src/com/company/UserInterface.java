@@ -1,19 +1,18 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
   public Scanner sc = new Scanner(System.in);
 
 
-  public String userInputName(){
+  public String userInputName() {
     System.out.print("Input name of costumer: ");
     return sc.nextLine();
   }
 
-  public void displayMenu () {
+  public void displayMenu() {
 
     System.out.printf("""
 
@@ -23,7 +22,7 @@ public class UserInterface {
         Remove Order      : 4
         Display stats     : 5
         Exit program      : 10
-        
+                
         """);
   }
 
@@ -33,7 +32,7 @@ public class UserInterface {
     return sc.nextInt();
   }
 
-  public void displayPizzaMenu (Menucard menuCard){
+  public void displayPizzaMenu(Menucard menuCard) {
     System.out.println(menuCard.toString());
   }
 
@@ -49,7 +48,30 @@ public class UserInterface {
     return sc.nextInt();
   }
 
-  public void displayOrderList (ArrayList<Bestilling> aListOfOrders) {
+  public void displayOrderList(OrderList aListOfOrders) {
+
+    ArrayList<Bestilling> currentOrders = aListOfOrders.getListOfOrders();
+    for (int i = 0; i < currentOrders.size(); i++) {
+
+      Bestilling temp = currentOrders.get(i);
+      ArrayList<Pizza> pizzaInOrder = temp.getOrderItems();
+      System.out.printf("""
+                
+          Pickuptime:       %d
+          Name:             %s
+          Price total:      %d
+          
+          """, temp.getPickUpTime(), temp.getCostumerName(), temp.getTotalPrice());
+
+      for (Pizza pizza : pizzaInOrder) {
+      System.out.printf("""
+          Pizza name:       %s
+          Pizza toppings:   %s
+          
+          """, pizza.getName(),pizza.getTopping());
+    }
+
+    }
 
   }
 

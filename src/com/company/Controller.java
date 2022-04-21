@@ -43,7 +43,7 @@ public class Controller {
       switch (choice) {
         case 1 -> ui.displayPizzaMenu(menuCard);
         case 2 -> newOrder();
-        case 3 -> System.out.println(orderList);
+        case 3 -> ui.displayOrderList(orderList);
         case 4 -> System.out.println("Remove Order");
         case 5 -> System.out.println("Display Stats");
         case 10 -> loop = false;
