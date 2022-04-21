@@ -26,8 +26,12 @@ public class Timer {
   }
 
     public String afhentningstidspunkt() {
+      int mintid = 600000;
+      int maxtid = 3600000;
+      int randomtid = (int)Math.floor(Math.random()*(maxtid-mintid+1)+mintid);
+
       // Timeren viser en time senere (altså hvornår pizzaen skal afhentes (3600000 er en time i millisekunder))
-      Date date = new Date(System.currentTimeMillis() + 3600000);
+      Date date = new Date(System.currentTimeMillis() + randomtid);
       String yourDesiredDateValue = new SimpleDateFormat("hh:mm").format(date);
       return yourDesiredDateValue;
     }
