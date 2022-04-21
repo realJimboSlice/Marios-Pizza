@@ -36,7 +36,7 @@ public class Timer {
       return yourDesiredDateValue;
     }
 
-  public void Nedtælling() throws InterruptedException {
+  /*public void Nedtælling() throws InterruptedException {
 
     //Scanner scan = new Scanner(System.in);
     // System.out.println("\nHvor lang tid skal der gå før ordren er klar til afhentning (i minutter) ?");
@@ -62,5 +62,5 @@ public class Timer {
     while (delay != 0);
     System.out.println("Ordre (nummer) klar til afhentning");
   }
-
+*/
 }
