@@ -28,7 +28,7 @@ public class UserInterface {
 
   public String userIndputPickupTime() {
     sc.next();
-    System.out.print("Indput pickup time: ");
+    System.out.print("Input pickup time: ");
     String time = sc.next();
     return time;
   }
@@ -38,14 +38,14 @@ public class UserInterface {
   }
 
   public int userIndputNumber() {
-    System.out.print("Indput choice: ");
+    System.out.print("Input choice: ");
     return sc.nextInt();
   }
 
   public int userIndputPizzaMenuNumber() {
     System.out.println();
     System.out.println("Input 0 to end the Order.");
-    System.out.print("Else indput menu number of the pizza: ");
+    System.out.print("Else input menu number of the pizza: ");
     return sc.nextInt();
   }
 
