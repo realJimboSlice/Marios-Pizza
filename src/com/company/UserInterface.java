@@ -52,6 +52,8 @@ public class UserInterface {
   public void displayOrderList(OrderList aListOfOrders, Timer timer) throws InterruptedException {
 
     ArrayList<Bestilling> currentOrders = aListOfOrders.getListOfOrders();
+
+
     for (int i = 0; i < currentOrders.size(); i++) {
 
       Bestilling temp = currentOrders.get(i);

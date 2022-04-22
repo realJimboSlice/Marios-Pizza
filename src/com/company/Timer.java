@@ -26,13 +26,17 @@ public class Timer {
   }
 
     public String afhentningstidspunkt() {
+      int mintid = 600000;
+      int maxtid = 3600000;
+      int randomtid = (int)Math.floor(Math.random()*(maxtid-mintid+1)+mintid);
+
       // Timeren viser en time senere (altså hvornår pizzaen skal afhentes (3600000 er en time i millisekunder))
-      Date date = new Date(System.currentTimeMillis() + 3600000);
+      Date date = new Date(System.currentTimeMillis() + randomtid);
       String yourDesiredDateValue = new SimpleDateFormat("hh:mm").format(date);
       return yourDesiredDateValue;
     }
 
-  public void Nedtælling() throws InterruptedException {
+  /*public void Nedtælling() throws InterruptedException {
 
     //Scanner scan = new Scanner(System.in);
     // System.out.println("\nHvor lang tid skal der gå før ordren er klar til afhentning (i minutter) ?");
@@ -58,5 +62,5 @@ public class Timer {
     while (delay != 0);
     System.out.println("Ordre (nummer) klar til afhentning");
   }
-
+*/
 }

@@ -12,6 +12,9 @@ public class Controller {
     Creator creator = new Creator();
     creator.createPizzas(menuCard);
 
+    //Laver bestillinger til sortering
+    creator.addSomePizzas(orderList, timer, menuCard);
+
 
     boolean loop = true;
     while (loop) {
