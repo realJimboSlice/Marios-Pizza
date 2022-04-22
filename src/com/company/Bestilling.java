@@ -22,6 +22,8 @@ public class Bestilling {
   }
 
 
+
+
   public void addPizzaToOrder (Pizza chosenPizza){
     orderItems.add(chosenPizza);
   }
@@ -31,8 +33,7 @@ public class Bestilling {
   }
 
   public int getTotalPrice() {
-    for (Pizza pizza:
-         orderItems) {
+    for (Pizza pizza: orderItems) {
       totalPrice += pizza.getPrice();
     }
     return totalPrice;

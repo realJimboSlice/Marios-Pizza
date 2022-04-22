@@ -67,6 +67,8 @@ public class Creator {
     Bestilling bestilling2 = new Bestilling(timer.afhentningstidspunkt(),"Peter");
     Bestilling bestilling3 = new Bestilling(timer.afhentningstidspunkt(),"Trine");
     Bestilling bestilling4 = new Bestilling(timer.afhentningstidspunkt(),"Mark");
+    Bestilling bestilling5 = new Bestilling(timer.afhentningstidspunkt(),"Ulrik");
+    Bestilling bestilling6 = new Bestilling(timer.afhentningstidspunkt(),"Sarah");
 
     bestilling1.addPizzaToOrder(menuCard.findPizzaByMenuNumber(3));
     bestilling1.addPizzaToOrder(menuCard.findPizzaByMenuNumber(4));
@@ -76,11 +78,18 @@ public class Creator {
     bestilling3.addPizzaToOrder(menuCard.findPizzaByMenuNumber(8));
     bestilling4.addPizzaToOrder(menuCard.findPizzaByMenuNumber(9));
     bestilling4.addPizzaToOrder(menuCard.findPizzaByMenuNumber(10));
+    bestilling5.addPizzaToOrder(menuCard.findPizzaByMenuNumber(8));
+    bestilling5.addPizzaToOrder(menuCard.findPizzaByMenuNumber(1));
+    bestilling6.addPizzaToOrder(menuCard.findPizzaByMenuNumber(12));
+    bestilling6.addPizzaToOrder(menuCard.findPizzaByMenuNumber(13));
 
     orderList.addOrder(bestilling1);
     orderList.addOrder(bestilling2);
     orderList.addOrder(bestilling3);
     orderList.addOrder(bestilling4);
+    orderList.addOrder(bestilling5);
+    orderList.addOrder(bestilling6);
+
 
   }
 

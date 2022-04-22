@@ -6,15 +6,18 @@ public class Controller {
   Menucard menuCard = new Menucard();
   Timer timer = new Timer();
 
+  private void showWaitingOrders (){
+    orderList.setListOfOrders(orderList.sortOrderlist2());
+    ui.displayOrderList(orderList.getListOfOrders());
+  }
 
-  public void mainMenu() throws InterruptedException {
+  public void mainMenu(){
 
     Creator creator = new Creator();
     creator.createPizzas(menuCard);
 
     //Laver bestillinger til sortering
     creator.addSomePizzas(orderList, timer, menuCard);
-
 
     boolean loop = true;
     while (loop) {
@@ -25,7 +28,7 @@ public class Controller {
       switch (choice) {
         case 1 -> ui.printMenu(menuCard);//ui.displayPizzaMenu(menuCard);
         case 2 -> orderList.newOrder(menuCard, timer);
-        case 3 -> ui.displayOrderList(orderList, timer);
+        case 3 -> showWaitingOrders();
         case 4 -> System.out.println("Remove Order");
         case 5 -> System.out.println("Display Stats");
         case 10 -> loop = false;

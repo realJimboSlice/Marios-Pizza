@@ -49,14 +49,12 @@ public class UserInterface {
     return sc.nextInt();
   }
 
-  public void displayOrderList(OrderList aListOfOrders, Timer timer) throws InterruptedException {
 
-    ArrayList<Bestilling> currentOrders = aListOfOrders.getListOfOrders();
+  public void displayOrderList(ArrayList<Bestilling> liste){
 
+    for (int i = 0; i < liste.size(); i++) {
 
-    for (int i = 0; i < currentOrders.size(); i++) {
-
-      Bestilling temp = currentOrders.get(i);
+      Bestilling temp = liste.get(i);
       ArrayList<Pizza> pizzaInOrder = temp.getOrderItems();
       System.out.printf("""
                 
@@ -65,7 +63,7 @@ public class UserInterface {
           Price total:      %d kr
           
           """, temp.getPickUpTime(), temp.getCostumerName(), temp.getTotalPrice());
-      //timer.Nedtælling();
+
       for (Pizza pizza : pizzaInOrder) {
       System.out.printf("""
           Pizza name:       %s
