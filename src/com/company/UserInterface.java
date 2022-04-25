@@ -20,7 +20,6 @@ public class UserInterface {
         Add Order         : 2
         View Orders       : 3
         Remove Order      : 4
-        Display stats     : 5
         Exit program      : 10
         
         """);
