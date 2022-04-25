@@ -12,6 +12,15 @@ public class UserInterface {
     return name;
   }
 
+  public void displayOrderRemoved () {
+    System.out.println("Order removed.");
+  }
+
+  public void displayOrderNotFound () {
+    System.out.println("Order not found.");
+  }
+
+
   public void displayMenu () {
 
     System.out.printf("""
