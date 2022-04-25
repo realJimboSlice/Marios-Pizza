@@ -20,9 +20,21 @@ public class UserInterface {
         Add Order         : 2
         View Orders       : 3
         Remove Order      : 4
+        Display stats     : 5
         Exit program      : 10
         
         """);
+  }
+
+  public String userIndputPickupTime() {
+    sc.next();
+    System.out.print("Indput pickup time: ");
+    String time = sc.next();
+    return time;
+  }
+
+  public void displayPizzaMenu(Menucard menuCard) {
+    System.out.println(menuCard.toString());
   }
 
   public int userIndputNumber() {
@@ -37,14 +49,11 @@ public class UserInterface {
     return sc.nextInt();
   }
 
-  public void displayOrderList(OrderList aListOfOrders){
+  public void displayOrderList(ArrayList<Order> liste){
 
-    ArrayList<Order> currentOrders = aListOfOrders.getListOfOrders();
+    for (int i = 0; i < liste.size(); i++) {
 
-
-    for (int i = 0; i < currentOrders.size(); i++) {
-
-      Order temp = currentOrders.get(i);
+      Order temp = liste.get(i);
       ArrayList<Pizza> pizzaInOrder = temp.getOrderItems();
       System.out.printf("""
           Ordrenummer:      %d      
@@ -68,6 +77,7 @@ public class UserInterface {
 
   public void printMenu(Menucard menuCard) {
     String dot = ".";
+    String space = " ";
 
     for (Pizza pizza : menuCard.getMenuCard()) {
       int repeat;
@@ -94,4 +104,5 @@ public class UserInterface {
   public void orderNotFound(){
     System.out.println("Order not found");
   }
+
 }

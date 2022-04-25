@@ -26,8 +26,7 @@ public class Order {
   }
 
   public int getTotalPrice() {
-    for (Pizza pizza :
-        orderItems) {
+    for (Pizza pizza: orderItems) {
       totalPrice += pizza.getPrice();
     }
     return totalPrice;
