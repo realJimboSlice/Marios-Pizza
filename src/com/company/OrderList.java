@@ -81,12 +81,14 @@ public class OrderList {
     return finalOrders;
   }
 
-  public void removeOrder(int orderNumber) {
+  public boolean removeOrder(int orderNumber) {
     for (int i = this.listOfOrders.size() - 1; i >= 0; i--) {
       Order order = listOfOrders.get(i);
       if (orderNumber == order.getOrderNumber()) {
         listOfOrders.remove(order);
+        return true;
       }
     }
+    return false;
   }
 }

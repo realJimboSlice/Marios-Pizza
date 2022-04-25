@@ -11,6 +11,17 @@ public class Controller {
     ui.displayOrderList(orderList.getListOfOrders());
   }
 
+  private void removeOrder () {
+    boolean removed = orderList.removeOrder(ui.removeOrder());
+
+    if (removed){
+      ui.displayOrderRemoved();
+    } else {
+      ui.displayOrderNotFound();
+    }
+
+  }
+
   public void mainMenu(){
 
     Creator creator = new Creator();
@@ -26,7 +37,7 @@ public class Controller {
         case 1 -> ui.printMenu(menuCard);
         case 2 -> orderList.newOrder(menuCard, timer);
         case 3 -> showWaitingOrders();
-        case 4 -> orderList.removeOrder(ui.removeOrder());
+        case 4 -> removeOrder();
         case 10 -> loop = false;
         default -> System.out.println("Invalid choice");
       }
