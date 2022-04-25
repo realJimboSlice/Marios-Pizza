@@ -26,9 +26,9 @@ public class OrderList {
 
   public void newOrder(Menucard menuCard, Timer timer) {
     String costumerName = ui.userInputName();
-    String pickUpTime = timer.pickupTime();
-
-    Order newPizzaOrder = new Order(pickUpTime, costumerName);
+    String pickupTime = timer.pickupTime();
+    
+    Order newPizzaOrder = new Order(pickupTime, costumerName);
 
     newPizzaOrder.setOrderNumber(listOfOrders.size());
 
