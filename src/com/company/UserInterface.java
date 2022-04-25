@@ -26,17 +26,6 @@ public class UserInterface {
         """);
   }
 
-  public String userIndputPickupTime() {
-    sc.next();
-    System.out.print("Input pickup time: ");
-    String time = sc.next();
-    return time;
-  }
-
-  public void displayPizzaMenu(Menucard menuCard) {
-    System.out.println(menuCard.toString());
-  }
-
   public int userIndputNumber() {
     System.out.print("Input choice: ");
     return sc.nextInt();
@@ -49,23 +38,23 @@ public class UserInterface {
     return sc.nextInt();
   }
 
-  public void displayOrderList(OrderList aListOfOrders, Timer timer) throws InterruptedException {
+  public void displayOrderList(OrderList aListOfOrders){
 
-    ArrayList<Bestilling> currentOrders = aListOfOrders.getListOfOrders();
+    ArrayList<Order> currentOrders = aListOfOrders.getListOfOrders();
 
 
     for (int i = 0; i < currentOrders.size(); i++) {
 
-      Bestilling temp = currentOrders.get(i);
+      Order temp = currentOrders.get(i);
       ArrayList<Pizza> pizzaInOrder = temp.getOrderItems();
       System.out.printf("""
-                
+          Ordrenummer:      %d      
           Pickuptime:       %s
           Name:             %s
           Price total:      %d kr
           
-          """, temp.getPickUpTime(), temp.getCostumerName(), temp.getTotalPrice());
-      //timer.Nedtælling();
+          """, temp.getOrderNumber(), temp.getPickUpTime(), temp.getCostumerName(), temp.getTotalPrice());
+
       for (Pizza pizza : pizzaInOrder) {
       System.out.printf("""
           Pizza name:       %s
@@ -78,12 +67,10 @@ public class UserInterface {
 
   }
 
-  public void printMenu(Menucard menuKort) {
+  public void printMenu(Menucard menuCard) {
     String dot = ".";
-    String space = " ";
 
-
-    for (Pizza pizza : menuKort.getMenuCard()) {
+    for (Pizza pizza : menuCard.getMenuCard()) {
       int repeat;
       if (pizza.getMenuNumber() == 1) {
         repeat = 2;
@@ -99,19 +86,13 @@ public class UserInterface {
     }
   }
 
-  public String pizzaName() {
-    System.out.println("Input name of new pizza.");
-    return sc.next();
+  public int removeOrder(){
+    System.out.println("Input number of order you want to remove");
+    int removeOrder = sc.nextInt();
+    return removeOrder;
   }
 
-  public int pizzaNum() {
-    System.out.println("Input designated number for menu.");
-    return sc.nextInt();
+  public void orderNotFound(){
+    System.out.println("Order not found");
   }
-
-  public int pizzaPrice() {
-    System.out.println("Input price of new pizza");
-    return sc.nextInt();
-  }
-
 }

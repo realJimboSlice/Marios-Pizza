@@ -6,7 +6,7 @@ public class Menucard {
 
   private ArrayList<Pizza> menuCard;
 
-  public Menucard(){
+  public Menucard() {
     this.menuCard = new ArrayList<>();
   }
 
@@ -16,21 +16,17 @@ public class Menucard {
     return space.repeat(30) + "PIZZAER:\n" + menuCard;
   }
 
-  public void addToMenu(Pizza pizza){
+  public void addToMenu(Pizza pizza) {
     menuCard.add(pizza);
-  }
-
-  public void removeFromMenu(Pizza pizza){
-    menuCard.remove(pizza);
   }
 
   public ArrayList<Pizza> getMenuCard() {
     return this.menuCard;
   }
 
-  public Pizza findPizzaByMenuNumber (int pizzaChoice) {
-    for (Pizza pizza: menuCard){
-      if (pizza.getMenuNumber() == pizzaChoice){
+  public Pizza findPizzaByMenuNumber(int pizzaChoice) {
+    for (Pizza pizza : menuCard) {
+      if (pizza.getMenuNumber() == pizzaChoice) {
         return pizza;
       }
     }

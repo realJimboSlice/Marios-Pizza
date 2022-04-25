@@ -2,27 +2,22 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class Bestilling {
+public class Order {
   private String pickUpTime;
-  private boolean isDelivered;
-  private boolean isPaid;
   private int totalPrice;
   private int orderNumber;
   private String costumerName;
-  private ArrayList <Pizza> orderItems;
+  private ArrayList<Pizza> orderItems;
 
-  public Bestilling (String pickUpTime, String costumerName){
+  public Order(String pickUpTime, String costumerName) {
     this.pickUpTime = pickUpTime;
     this.costumerName = costumerName;
-    this.isPaid = false;
-    this.isDelivered = false;
     this.totalPrice = 0;
     this.orderNumber = 0;
     this.orderItems = new ArrayList<>();
   }
 
-
-  public void addPizzaToOrder (Pizza chosenPizza){
+  public void addPizzaToOrder(Pizza chosenPizza) {
     orderItems.add(chosenPizza);
   }
 
@@ -31,8 +26,8 @@ public class Bestilling {
   }
 
   public int getTotalPrice() {
-    for (Pizza pizza:
-         orderItems) {
+    for (Pizza pizza :
+        orderItems) {
       totalPrice += pizza.getPrice();
     }
     return totalPrice;
@@ -42,7 +37,15 @@ public class Bestilling {
     return orderItems;
   }
 
-  public String getPickUpTime(){
+  public int getOrderNumber() {
+    return orderNumber;
+  }
+
+  public void setOrderNumber(int orderNumber) {
+    this.orderNumber = orderNumber + 1;
+  }
+
+  public String getPickUpTime() {
     return pickUpTime;
   }
 

@@ -9,9 +9,9 @@ public class Pizza {
   private int price;
   private ArrayList<Topping> Topping;
 
-  public Pizza(String name, int menuNmb, int price) {
+  public Pizza(String name, int menuNumber, int price) {
     this.name = name;
-    this.menuNumber = menuNmb;
+    this.menuNumber = menuNumber;
     this.price = price;
     this.Topping = new ArrayList<>();
   }
@@ -23,10 +23,6 @@ public class Pizza {
 
   public String getName() {
     return this.name;
-  }
-
-  public int getOrdreNmb() {
-    return menuNumber;
   }
 
   public int getPrice() {
@@ -41,23 +37,6 @@ public class Pizza {
     for (Topping topping : toppings) {
       Topping.add(topping);
     }
-  }
-
-
-  public void removeTopping(String topping) {
-    this.Topping.remove(topping);
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public void setOrdreNmb(int ordreNmb) {
-    this.menuNumber = ordreNmb;
-  }
-
-  public void setPrice(int price) {
-    this.price = price;
   }
 
   public int getMenuNumber() {

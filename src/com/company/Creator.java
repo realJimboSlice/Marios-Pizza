@@ -60,34 +60,4 @@ public class Creator {
     mafia.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, Topping.PEPPERONI, Topping.BACON, Topping.LØG, Topping.OREGANO});
     menukort.addToMenu(mafia);
   }
-
-
-  public void addSomePizzas(OrderList orderList, Timer timer, Menucard menuCard){
-    Bestilling bestilling1 = new Bestilling(timer.afhentningstidspunkt(),"Sebastian");
-    Bestilling bestilling2 = new Bestilling(timer.afhentningstidspunkt(),"Peter");
-    Bestilling bestilling3 = new Bestilling(timer.afhentningstidspunkt(),"Trine");
-    Bestilling bestilling4 = new Bestilling(timer.afhentningstidspunkt(),"Mark");
-
-    bestilling1.addPizzaToOrder(menuCard.findPizzaByMenuNumber(3));
-    bestilling1.addPizzaToOrder(menuCard.findPizzaByMenuNumber(4));
-    bestilling2.addPizzaToOrder(menuCard.findPizzaByMenuNumber(5));
-    bestilling2.addPizzaToOrder(menuCard.findPizzaByMenuNumber(6));
-    bestilling3.addPizzaToOrder(menuCard.findPizzaByMenuNumber(7));
-    bestilling3.addPizzaToOrder(menuCard.findPizzaByMenuNumber(8));
-    bestilling4.addPizzaToOrder(menuCard.findPizzaByMenuNumber(9));
-    bestilling4.addPizzaToOrder(menuCard.findPizzaByMenuNumber(10));
-
-    orderList.addOrder(bestilling1);
-    orderList.addOrder(bestilling2);
-    orderList.addOrder(bestilling3);
-    orderList.addOrder(bestilling4);
-
-  }
-
-/*  public void createNewPizza(Menucard menukort){
-
-    Pizza pizza = new Pizza(ui.pizzaName(), ui.pizzaNum(), ui.pizzaPrice());
-    pizza.addToppings(new Topping[]{Topping.TOMATSAUCE, Topping.OST, ui.toppingPizza()});
-    menukort.addToMenu(pizza);
-  }*/
 }

@@ -3,32 +3,34 @@ package com.company;
 import java.util.ArrayList;
 
 public class OrderList {
-  private ArrayList <Bestilling> listOfOrders;
+  private ArrayList<Order> listOfOrders;
   public UserInterface ui = new UserInterface();
 
 
-  public OrderList (){
+  public OrderList() {
     this.listOfOrders = new ArrayList<>();
   }
 
-  public void addOrder (Bestilling newOrder) {
+  public void addOrder(Order newOrder) {
     listOfOrders.add(newOrder);
   }
 
-  public ArrayList<Bestilling> getListOfOrders() {
+  public ArrayList<Order> getListOfOrders() {
     return listOfOrders;
   }
 
   @Override
   public String toString() {
-    return "Orders in the system: "+ listOfOrders;
+    return "Orders in the system: " + listOfOrders;
   }
 
   public void newOrder(Menucard menuCard, Timer timer) {
     String costumerName = ui.userInputName();
-    String pickUpTime = timer.afhentningstidspunkt();
+    String pickUpTime = timer.pickupTime();
 
-    Bestilling newPizzaOrder = new Bestilling(pickUpTime, costumerName);
+    Order newPizzaOrder = new Order(pickUpTime, costumerName);
+
+    newPizzaOrder.setOrderNumber(listOfOrders.size());
 
     int pizzaOfChoiceMenuNumber = 1;
     while (pizzaOfChoiceMenuNumber != 0) {
@@ -40,5 +42,14 @@ public class OrderList {
     }
 
     addOrder(newPizzaOrder);
+  }
+
+  public void removeOrder(int orderNumber) {
+    for (int i = this.listOfOrders.size() - 1; i >= 0; i--) {
+      Order order = listOfOrders.get(i);
+      if (orderNumber == order.getOrderNumber()) {
+        listOfOrders.remove(order);
+      }
+    }
   }
 }
